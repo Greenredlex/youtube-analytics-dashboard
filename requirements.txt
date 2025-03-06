@@ -1,0 +1,7 @@
+streamlit
+plotly
+google-api-python-client
+pandas
+numpy
+python-dotenv
+isodate
