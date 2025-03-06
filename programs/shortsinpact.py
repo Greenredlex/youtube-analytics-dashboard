@@ -722,7 +722,7 @@ def show_shortsinpact():
             # Format the statistics for display
             shorts_view_stats = shorts_view_stats.round(0)
             for col in ['mean', 'std', 'min', '25%', '50%', '75%', 'max']:
-                shorts_view_stats[col] = shorts_view_stats[col].astype(int).apply(lambda x: f"{x:,}")
+                shorts_view_stats[col] = shorts_view_stats[col]
             
             st.dataframe(shorts_view_stats)
         else:
@@ -759,7 +759,7 @@ def show_shortsinpact():
             # Format the statistics for display
             regular_view_stats = regular_view_stats.round(0)
             for col in ['mean', 'std', 'min', '25%', '50%', '75%', 'max']:
-                regular_view_stats[col] = regular_view_stats[col].astype(int).apply(lambda x: f"{x:,}")
+                regular_view_stats[col] = regular_view_stats[col]
             
             st.dataframe(regular_view_stats)
         else:
