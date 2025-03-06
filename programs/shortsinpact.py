@@ -94,8 +94,8 @@ def show_shortsinpact():
     shorts_threshold = 60  # Threshold in seconds for what counts as a short
     
     # Create two datasets
-    df_shorts = df[df['duration_seconds'] < shorts_threshold].copy()
-    df_regular = df[df['duration_seconds'] >= shorts_threshold].copy()
+    df_shorts = df[df['duration_seconds'] <= shorts_threshold].copy()
+    df_regular = df[df['duration_seconds'] > shorts_threshold].copy()
     
     # Display summary metrics
     total_videos = len(df)
